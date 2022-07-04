@@ -179,7 +179,7 @@ void array_remove_index(void *head, size_t index) {
     } else if (ptr->type == AR_STRING) {
         ArrString *array = (ArrString *)head;
         while ((index + 1) < (ptr->length)) {
-            size_t str_len = strlen(arr[index + 1]);
+            size_t str_len = strlen(array->arr[index + 1]);
             char *data = realloc(array->arr[index],
                 sizeof(char) * ++str_len);
             if (data == NULL) {
