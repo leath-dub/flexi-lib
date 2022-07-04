@@ -6,8 +6,8 @@ A simple dynamic array library in C
 
 - Support for 1 dimensional integer arrays and 2 dimensional string arrays
 
-- Methods applicable on the above, append, pop, remove_index, replace_index,
-  print
+- Methods applicable on the above, ``append``, ``pop``, ``remove_index``, ``replace_index``,
+  ``print``
 
 ## Usage
 
@@ -31,7 +31,7 @@ This is important to free up memory allocated by malloc/realloc.
 ### Notes
 
 - all methods take first argument as a reference to your array struct
-- when passing ints to the append/replace_index functions you will get a
+- when passing ints to the ``append``/``replace_index`` functions you will get a
 warning about int -> pointer conversion( this is safe, ignore it)
 - Feedback and/or questions are welcome, p.s. You probably shouldn't use this
-library, I am still learning C
+library, I am still learning C :).
