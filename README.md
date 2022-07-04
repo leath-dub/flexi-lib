@@ -33,5 +33,6 @@ This is important to free up memory allocated by malloc/realloc.
 - all methods take first argument as a reference to your array struct
 - when passing ints to the ``append``/``replace_index`` functions you will get a
 warning about int -> pointer conversion( this is safe, ignore it)
+- Upon request or in the case that I need it, I will add support for other types
 - Feedback and/or questions are welcome, p.s. You probably shouldn't use this
 library, I am still learning C :).
