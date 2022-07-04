@@ -153,8 +153,7 @@ void array_append(void *head, const void *item) {
         }
         // appending item
         char *casted = (char *)item;
-        size_t str_len;
-        for (str_len = 0; casted[str_len] != '\0'; ++str_len);
+        size_t str_len = strlen(casted);
         char *data = realloc(array->arr[ptr->length],
             sizeof(char) * ++str_len);
         array->arr[ptr->length] = data;
@@ -180,11 +179,7 @@ void array_remove_index(void *head, size_t index) {
     } else if (ptr->type == AR_STRING) {
         ArrString *array = (ArrString *)head;
         while ((index + 1) < (ptr->length)) {
-            size_t str_len;
-            // get length of string infront of target
-            for (str_len = 0;
-                array->arr[index + 1][str_len] != '\0';
-            ++str_len);
+            size_t str_len = strlen(arr[index + 1]);
             char *data = realloc(array->arr[index],
                 sizeof(char) * ++str_len);
             if (data == NULL) {
@@ -206,8 +201,7 @@ void array_replace_index(void *head, size_t index, const void *item) {
     } else if (ptr->type == AR_STRING) {
         ArrString *array = (ArrString *)head;
         char *str = (char *)item;
-        size_t str_len;
-        for (str_len = 0; str[str_len] != '\0'; ++str_len);
+        size_t str_len = strlen(str);
         char *data = realloc(array->arr[index],
             sizeof(char) * ++str_len);
         if (data == NULL) {
