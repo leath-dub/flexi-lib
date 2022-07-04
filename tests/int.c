@@ -7,11 +7,11 @@
  */
 
 void main(void) {
-    ArrString arr;
-    FlexiInit(&arr, "STRING");
+    ArrInt arr;
+    FlexiInit(&arr, "INT");
 
     for (size_t i = 0; i < 100; ++i)
-        arr.head.append(&arr, "Hello World!");
+        arr.head.append(&arr, i);
     arr.head.print(&arr);
     printf("len: %d, cap: %d\n", arr.head.length, arr.head.capacity);
 
@@ -19,7 +19,7 @@ void main(void) {
     arr.head.print(&arr);
     printf("len: %d, cap: %d\n", arr.head.length, arr.head.capacity);
 
-    arr.head.replace_index(&arr, 20, "REPLACED");
+    arr.head.replace_index(&arr, 20, 666);
     arr.head.print(&arr);
     printf("len: %d, cap: %d\n", arr.head.length, arr.head.capacity);
 
