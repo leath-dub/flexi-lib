@@ -31,16 +31,11 @@ typedef struct {
 
 typedef struct {
     ArrHead head;
-    char *arr;
-} ArrChar;
-
-typedef struct {
-    ArrHead head;
     char **arr;
 } ArrString;
 
 // debug macros
-#define DEBUG 1
+// #define DEBUG 1
 #define log(MSG) printf("log: "MSG"\n")
 #define err(MSG) fprintf(stderr, "error in line %d: "MSG"\n", __LINE__)
 
