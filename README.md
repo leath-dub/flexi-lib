@@ -1,5 +1,4 @@
 # Flexi library
-
 A simple dynamic array library in C
 
 ---
